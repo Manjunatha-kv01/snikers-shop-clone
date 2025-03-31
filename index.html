@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourBrand - Modern Clothing Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link Google Fonts (Optional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ==========================
+         Header Section
+    ========================== -->
+    <header class="site-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <a href="index.html">YourBrand</a> <!-- Link logo to Homepage -->
+            </div>
+            <!-- Navigation Bar -->
+            <nav class="main-nav">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="main-menu">
+                    <li><a href="#men-category">Men</a></li>
+                    <li><a href="#women-category">Women</a></li>
+                    <li><a href="#kids-category">Kids</a></li>
+                    <li><a href="#accessories-category">Accessories</a></li>
+                    <li><a href="#sale-section">Sale</a></li>
+                    <li><a href="#new-arrivals-section">New Arrivals</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                 <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="search" id="searchInput" placeholder="Search products, brands...">
+                    <button type="submit" aria-label="Search"><i class="fas fa-search"></i></button>
+                </div>
+                 <!-- User Account, Wishlist, Cart Icons -->
+                <a href="#user-account-page" class="action-icon" aria-label="My Account"><i class="fas fa-user"></i></a>
+                <a href="#wishlist-page" class="action-icon" aria-label="Wishlist"><i class="fas fa-heart"></i><span class="wishlist-count" style="display: none;">0</span></a> <!-- Wishlist count (optional) -->
+                <a href="#cart.html" class=action-icon" aria-label="Shopping Cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================
+         Main Content Area (Homepage)
+    ========================== -->
+    <main id="homepage">
+        <!-- Hero Section (Showcasing Offers/Trends) -->
+        <section class="hero">
+            <div class="container">
+                <h1>Summer Sale Up To 50% Off</h1>
+                <p>Explore the hottest deals of the season.</p>
+                <a href="#sale-section" class="btn btn-primary">Shop Sale</a>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories" id="categories-section">
+            <div class="container">
+                <h2>Shop by Category</h2>
+                <div class="category-grid">
+                    <a href="#men-category" class="category-item">
+                        <img src="image\A1.png" alt="Men's Clothing">
+                        <span>Men</span>
+                    </a>
+                    <a href="#women-category" class="category-item">
+                         <img src="image\A2.png" alt="Women's Clothing">
+                         <span>Women</span>
+                     </a>
+                     <a href="#kids-category" class="category-item">
+                        <img src="image\A3.png" alt="Kids' Clothing">
+                        <span>Kids</span>
+                    </a>
+                    <a href="#accessories-category" class="category-item">
+                        <img src="image\A4.png" alt="Accessories">
+                        <span>Accessories</span>
+                    </a>
+                    <a href="#ethnic-category" class="category-item">
+                        <img src="image\A5.png" alt="Ethnic Wear">
+                        <span>Ethnic Wear</span>
+                    </a>
+                    <a href="#shoes-category" class="category-item">
+                         <img src="image\A6.png" alt="Shoes">
+                         <span>Shoes</span>
+                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals Section -->
+        <section class="product-section new-arrivals" id="new-arrivals-section">
+            <div class="container">
+                <h2>New Arrivals</h2>
+                 <!-- Placeholder for Search & Filters -->
+                 <!-- NOTE: Full filter functionality requires JavaScript and potentially backend integration. -->
+                 <!-- This is just a visual placeholder. -->
+                 <div class="filter-controls" id="filter-controls-placeholder">
+                     <p><strong>Refine Your Search:</strong></p>
+                     <div class="filter-buttons">
+                        <button class="filter-btn" data-filter="size">Size <i class="fas fa-chevron-down"></i></button>
+                        <button class="filter-btn" data-filter="color">Color <i class="fas fa-chevron-down"></i></button>
+                        <button class="filter-btn" data-filter="price">Price Range <i class="fas fa-chevron-down"></i></button>
+                        <button class="filter-btn" data-filter="brand">Brand <i class="fas fa-chevron-down"></i></button>
+                        <button class="filter-btn" data-filter="sort">Sort By <i class="fas fa-chevron-down"></i></button>
+                     </div>
+                     <!-- Dropdown/Modal containers for filters would go here (hidden initially) -->
+                     <div id="filter-options-size" class="filter-options" style="display:none;"> Sizes... </div>
+                     <div id="filter-options-color" class="filter-options" style="display:none;"> Colors... </div>
+                     </div>
+
+                <div class="product-grid">
+                    <!-- Product Card 1 (Links to a theoretical Product Page) -->
+                    <div class="product-card">
+                        <!-- The entire card can be wrapped in an <a> leading to the Product Page -->
+                        <a href="#product-detail-page-1" class="product-link-wrapper">
+                            <div class="product-image-container">
+                                <img src="image\B1.png" alt="Modern Linen Shirt" class="product-image">
+                                <button class="wishlist-btn quick-action" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Modern Linen Shirt</h3>
+                                <div class="product-rating" aria-label="Rating: 4.5 out of 5 stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="rating-count">(120 Reviews)</span> <!-- Placeholder for review count -->
+                                </div>
+                                <p class="product-price">$55.00</p>
+                                <!-- Size/Color variants might be shown here or on product page -->
+                            </div>
+                        </a>
+                        <!-- Add to Cart button is separate from the main link -->
+                        <div class="product-actions-standalone">
+                             <button class="btn btn-secondary add-to-cart-btn">Add to Cart</button>
+                         </div>
+                    </div> <!-- End Product Card 1 -->
+
+                     <!-- Product Card 2 -->
+                     <div class="product-card">
+                        <a href="#product-detail-page-2" class="product-link-wrapper">
+                            <div class="product-image-container">
+                                <img src="image\B2.png" alt="Floral Print Maxi Dress" class="product-image">
+                                <button class="wishlist-btn quick-action" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Floral Print Maxi Dress</h3>
+                                 <div class="product-rating" aria-label="Rating: 4.0 out of 5 stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i> <!-- Empty star -->
+                                    <span class="rating-count">(85 Reviews)</span>
+                                </div>
+                                <p class="product-price">$79.99 <span class="original-price">$99.99</span></p>
+                            </div>
+                         </a>
+                         <div class="product-actions-standalone">
+                            <button class="btn btn-secondary add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div> <!-- End Product Card 2 -->
+
+                    <!-- Add more new arrival product cards here -->
+                     <div class="product-card">
+                        <a href="#product-detail-page-3" class="product-link-wrapper">
+                            <div class="product-image-container">
+                                <img src="image\B3.png" alt="Casual Graphic Tee" class="product-image">
+                                <button class="wishlist-btn quick-action" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Casual Graphic Tee</h3>
+                                 <div class="product-rating" aria-label="Rating: 5.0 out of 5 stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="rating-count">(210 Reviews)</span>
+                                </div>
+                                <p class="product-price">$24.50</p>
+                            </div>
+                        </a>
+                        <div class="product-actions-standalone">
+                           <button class="btn btn-secondary add-to-cart-btn">Add to Cart</button>
+                       </div>
+                   </div> <!-- End Product Card 3 -->
+
+                   <div class="product-card">
+                        <a href="#product-detail-page-4" class="product-link-wrapper">
+                            <div class="product-image-container">
+                                <img src="image\B3.png" alt="Slim Fit Chinos" class="product-image">
+                                <button class="wishlist-btn quick-action" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Slim Fit Chinos</h3>
+                                 <div class="product-rating" aria-label="Rating: 4.2 out of 5 stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="rating-count">(60 Reviews)</span>
+                                </div>
+                                <p class="product-price">$65.00</p>
+                            </div>
+                        </a>
+                        <div class="product-actions-standalone">
+                           <button class="btn btn-secondary add-to-cart-btn">Add to Cart</button>
+                       </div>
+                   </div> <!-- End Product Card 4 -->
+                </div> <!-- End Product Grid -->
+            </div>
+        </section>
+
+        <!-- Trending Products / Special Offers Section -->
+        <section class="product-section trending-products" id="sale-section">
+            <div class="container">
+                <h2>Trending & On Sale</h2>
+                <div class="product-grid">
+                     <!-- Product Card 5 (Sale Item) -->
+                     <div class="product-card sale-item"> <!-- Added class for potential styling -->
+                        <a href="#product-detail-page-5" class="product-link-wrapper">
+                            <div class="product-image-container">
+                                <img src="image\B4.png" alt="Comfy Hoodie" class="product-image">
+                                <span class="sale-badge">SALE</span> <!-- Sale indicator -->
+                                <button class="wishlist-btn quick-action" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Comfy Cotton Hoodie</h3>
+                                 <div class="product-rating" aria-label="Rating: 4.6 out of 5 stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                    <span class="rating-count">(150 Reviews)</span>
+                                </div>
+                                <p class="product-price">$39.99 <span class="original-price">$59.99</span></p>
+                            </div>
+                        </a>
+                         <div class="product-actions-standalone">
+                            <button class="btn btn-secondary add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div> <!-- End Product Card 5 -->
+
+                     <!-- Product Card 6 (Trending) -->
+                     <div class="product-card">
+                        <a href="#product-detail-page-6" class="product-link-wrapper">
+                            <div class="product-image-container">
+                                <img src="image\B5.png" alt="Classic White Sneakers" class="product-image">
+                                <button class="wishlist-btn quick-action" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Classic White Sneakers</h3>
+                                 <div class="product-rating" aria-label="Rating: 4.8 out of 5 stars">
+                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                    <span class="rating-count">(300 Reviews)</span>
+                                </div>
+                                <p class="product-price">$85.00</p>
+                            </div>
+                        </a>
+                         <div class="product-actions-standalone">
+                            <button class="btn btn-secondary add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div> <!-- End Product Card 6 -->
+
+                    <!-- Add more trending/sale product cards here -->
+
+                </div> <!-- End Product Grid -->
+            </div>
+        </section>
+
+        <!-- Placeholder Section for Product Page Content -->
+        <!-- In a real single-page application (SPA) or multi-page site, this content -->
+        <!-- would load dynamically or be on a separate HTML file (e.g., product-detail.html) -->
+        <section id="product-detail-page-placeholder" style="display: none; padding: 40px 0; background: #eef;">
+            <div class="container">
+                <h2>Product Detail Page (Placeholder)</h2>
+                <p>This section would dynamically show the details for a selected product.</p>
+                <ul>
+                    <li>Multiple Images / Carousel</li>
+                    <li>Product Title</li>
+                    <li>Price, Discount</li>
+                    <li>Size Selector (S, M, L, XL)</li>
+                    <li>Color Selector</li>
+                    <li>Quantity Selector</li>
+                    <li>"Add to Cart" & "Add to Wishlist" Buttons</li>
+                    <li>Detailed Description Tab</li>
+                    <li>Size Guide Tab/Link</li>
+                    <li>Customer Reviews Section</li>
+                    <li>Related Products</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Placeholder Section for Cart Page -->
+        <section id="cart-page-placeholder" style="display: none; padding: 40px 0; background: #efe;">
+             <div class="container">
+                <h2>Shopping Cart (Placeholder)</h2>
+                <p>This section would show items added to the cart.</p>
+                 <!-- Cart items list, quantity adjustment, remove item, subtotal, proceed to checkout button -->
+            </div>
+        </section>
+
+         <!-- Placeholder Section for Wishlist Page -->
+        <section id="wishlist-page-placeholder" style="display: none; padding: 40px 0; background: #fee;">
+             <div class="container">
+                <h2>My Wishlist (Placeholder)</h2>
+                <p>This section would show items saved to the wishlist.</p>
+                 <!-- Wishlist items grid/list, move to cart, remove item -->
+            </div>
+        </section>
+
+        <!-- Placeholder Section for User Account Page -->
+        <section id="user-account-page-placeholder" style="display: none; padding: 40px 0; background: #eff;">
+             <div class="container">
+                <h2>My Account (Placeholder)</h2>
+                <p>This section would contain user profile info, orders, etc.</p>
+                 <!-- Links/Tabs for Profile, Order History, Addresses, Saved Cards, Wishlist -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================
+         Footer Section
+    ========================== -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-section about">
+                <h4>About YourBrand</h4>
+                <p>Your one-stop shop for the latest fashion trends. Quality clothing at affordable prices.</p>
+                 <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                 <h4>Shop</h4>
+                 <ul>
+                    <li><a href="#men-category">Men</a></li>
+                    <li><a href="#women-category">Women</a></li>
+                    <li><a href="#kids-category">Kids</a></li>
+                    <li><a href="#accessories-category">Accessories</a></li>
+                    <li><a href="#sale-section">Sale / Offers</a></li>
+                 </ul>
+            </div>
+             <div class="footer-section links">
+                 <h4>User Account</h4> <!-- User Account Links -->
+                 <ul>
+                    <li><a href="#user-account-page">My Profile</a></li>
+                    <li><a href="#order-history">Order History</a></li>
+                    <li><a href="#addresses">Manage Addresses</a></li>
+                    <li><a href="#wishlist-page">My Wishlist</a></li>
+                    <li><a href="#cart.html">My Cart</a></li>
+                 </ul>
+            </div>
+            <div class="footer-section links">
+                 <h4>Customer Support</h4> <!-- Customer Support Links -->
+                 <ul>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                    <li><a href="#shipping-policy">Shipping Policy</a></li>
+                    <li><a href="#returns-exchanges">Returns & Exchanges</a></li>
+                    <li><a href="#track-order">Track Order</a></li>
+                    <li><a href="#live-chat" id="live-chat-link">Live Chat <i class="fas fa-comment-dots"></i></a></li> <!-- Chat Support Link -->
+                 </ul>
+            </div>
+             <div class="footer-section payment-info"> <!-- Checkout & Payment Info -->
+                <h4>Secure Payments</h4>
+                <p>100% Secure checkout guaranteed.</p>
+                 <div class="payment-methods-icons">
+                     <!-- Replace with actual icons or images -->
+                     <i class="fab fa-cc-visa" title="Visa"></i>
+                     <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                     <i class="fab fa-cc-paypal" title="PayPal"></i>
+                     <i class="fab fa-google-pay" title="Google Pay"></i>
+                     <span>UPI</span> <!-- Text for UPI -->
+                     <span>COD Available</span> <!-- Text for Cash On Delivery -->
+                 </div>
+                 <h4>Stay Updated</h4> <!-- Newsletter moved here or keep separate -->
+                 <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+             </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2023 YourBrand. All Rights Reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Basic JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
